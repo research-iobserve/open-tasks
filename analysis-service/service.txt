@@ -1,0 +1,30 @@
+# iObserve Analysis Service
+
+The iObserve analysis service is intended to collect monitoring data
+from various sources, preprocess and aggregate the data, and maintain
+an abstract runtime model of the observed system. In future, the
+analysis service will be supplemented by additional services for 
+evaluation and prediction.
+
+= Overview =
+
+Involved frameworks:
+ * Kieker monitoring
+ * Teetime pipe and filter framework
+ * Kieker Teetime stages 
+ * Existing iObserve stages
+
+= Design =
+
+The service should be realized as an Unix daemon which accepts various
+TCP connections for monitoring data. Internally these connections are
+handled by a Teetime based pipe and filter chain. The runtim model is
+managed by a model manager using the PCM as a model (and my use CDO to
+store the model in a database). It might be necessary to supplement the
+PCM with additional databases.
+
+The analysis pipeline triggers updates in the model via the model
+manager realized in data sinks.
+
+
+
