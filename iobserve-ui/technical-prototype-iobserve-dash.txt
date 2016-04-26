@@ -1,0 +1,86 @@
+Technical Prototype of iObserve Dash
+====================================
+
+= Overview =
+
+The iObserve project develops an approach integrating development and
+operations (DevOps). The basic concept in iObserve is the reuse of 
+design-time models at run-time to support analysis and adaptation of
+software systems utilizing cloud services.
+This includes infrastructure, platform, and software services.
+
+Due to the complex nature of cloud-based software systems, the
+adaptation cannot be performed automatically for all contingencies.
+Therefore, operator intervention is necessary.
+
+In context of performance predictions, adaptation mechanisms rely on
+past events to predict the future. This approach can be extended to
+support regular seasonal behavior changes. However, it cannot predict
+events which have never occured or are triggered randomly. For example,
+a sales event promoting a new product or offering a substantial discount
+may occur at any time. Such events may also be limited to a certain
+geographic location. To mitigate this limitation, iObserve allows to
+introduce behavior profiles associated with such sales event which must
+be induced into the prediction and adaptation mechanism.
+
+Both operator interventions require an interface which provides the
+operator with information about the current and predicted state of the
+software system, communicate adaptation goals, and allow to introduce
+and modify behavior profiles. As operators are comfortable with
+web-based applications, we intend to develop such application which
+offers this functionality.
+
+
+= Goals =
+
+ * Web-based application
+ * Presentation of the present architecture combined with analysis
+   results
+ * Presentation of adaptation goals (architecture candidates)
+ * Presentation of user behavior and workload intensities
+ * Editing of behavior and workload intensities
+ * Generation and presentation of adaptation plans
+
+
+= Challenges =
+
+ * Run-time models are constantly updated. Therefore, an entity present
+   at one time might no longer be present when a user request details.
+ * The application must be extendable for future students to integrate
+   additional views.
+ * The basic navigation concept might be changed over time, but the 
+   single visualization should easily be adapted to the new concept.
+ * The UI must be robust, but still use modern technologies to provide
+   an acceptable user experience
+
+
+= Technical Requirements =
+
+ * Integration of the iObserve PCM run-time model
+ * Integration of TeeTime and Kieker-based analysis of iObserve
+ * Use of KIELER layouting for graphics
+ * Use of Maven as build system
+ * Use of EMF for modeling purposes
+ * Java/JVM domain
+
+
+= Functional Requirements =
+
+ * General dashboard with overview of the present state of the
+   architecture (hosts, host services etc.)
+ * Either adaptive layouting where single nodes can be opened or 
+   separate view for the selected component.
+ * Similar view for adaptation candidates
+
+
+= Project Tasks =
+
+ * Evaluation and selection of a suitable web-technology for the UI
+ * Integration of that technology with KIELER web technology
+ * Overall application design
+ * Integration of TeeTime based analysis
+ * Integration of EMF technology in web context
+ * Refined design
+ * Realization of views and editors for workload and behavior models
+ 
+
