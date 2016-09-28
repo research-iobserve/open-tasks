@@ -76,7 +76,7 @@ offers this functionality.
 = Project Tasks =
 
  * Evaluation and selection of a suitable web-technology for the UI
- * Integration of that technology with KIELER web technology
+ * Integration of that technology web layouting technologies
  * Overall application design
  * Integration of TeeTime based analysis
  * Integration of EMF technology in web context
