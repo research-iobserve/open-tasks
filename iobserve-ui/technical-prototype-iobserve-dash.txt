@@ -58,7 +58,7 @@ offers this functionality.
 
  * Integration of the iObserve PCM run-time model
  * Integration of TeeTime and Kieker-based analysis of iObserve
- * Use of KIELER layouting for graphics
+ * Use of a layout engine for the graphics
  * Use of Maven as build system
  * Use of EMF for modeling purposes
  * Java/JVM domain
